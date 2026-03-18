@@ -27,13 +27,13 @@ Task Management App is a simple full-stack productivity tool designed to help us
 > Add your screenshots here to showcase the app.
 
 ### Home Page
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/Home.png)
 
 ### Task List Page
-![Task List Page](./screenshots/tasklist.png)
+![Task List Page](./screenshots/TaskListPage.png)
 
 ### Create / Edit Task
-![Task Form](./screenshots/task-form.png)
+![Task Form](./screenshots/TaskForm.png)
 
 > If you don’t have screenshots yet, you can safely leave this section in place and add the image files later.
 
