@@ -57,7 +57,7 @@ Make sure you have the following installed:
 
 ### 1) Start the backend
 
-### Open a terminal in the `backend` folder:
+# Open a terminal in the `backend` folder:
 ```bash python -m venv .venv``` 
 
 Activate the virtual environment:
@@ -68,10 +68,10 @@ Activate the virtual environment:
 #### macOS / Linux
 ```bash source .venv/bin/activate``` 
 
-### Install dependencies
+# Install dependencies
 ```bash pip install -r requirements.txt``` 
 
-### Start the backend server
+# Start the backend server
 ```bash uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000``` 
 
 The backend will be available at:
@@ -83,7 +83,7 @@ The backend will be available at:
 
 ### 2) Start the frontend
 
-Open a second terminal in the `frontend` folder:
+# Open a second terminal in the `frontend` folder:
 ```bash npm install npm run dev``` 
 
 The frontend will be available at:
@@ -120,7 +120,7 @@ This project includes Docker support for both the frontend and backend.
 
 ### 1) Start the app
 
-### From the project root, run:
+# From the project root, run:
 ```bash docker compose up --build``` 
 
 This will:
