@@ -9,6 +9,10 @@ Built with:
 - **Database:** SQLite
 - **Containerization:** Docker + Docker Compose
 
+## About
+
+Task Management App is a simple full-stack productivity tool designed to help users organize work into task lists, add and manage tasks, and keep track of progress. It includes a clean React interface, a FastAPI backend, and persistent SQLite storage for a lightweight but practical workflow.
+
 ## Features
 
 - Create, edit, and delete task lists
@@ -17,6 +21,21 @@ Built with:
 - Persistent SQLite storage
 - Local development support
 - Docker-based setup for easy deployment
+
+## Screenshots
+
+> Add your screenshots here to showcase the app.
+
+### Home Page
+![Home Page](./screenshots/home.png)
+
+### Task List Page
+![Task List Page](./screenshots/tasklist.png)
+
+### Create / Edit Task
+![Task Form](./screenshots/task-form.png)
+
+> If you don’t have screenshots yet, you can safely leave this section in place and add the image files later.
 
 ## Getting Started
 
@@ -40,31 +59,22 @@ Make sure you have the following installed:
 ### 1) Start the backend
 
 Open a terminal in the `backend` folder:
-```
 
-bash python -m venv .venv``` 
+bash python -m venv .venv
 
 Activate the virtual environment:
 
 #### Windows
-```
-
-bash .venv\Scripts\activate``` 
+bash .venv\Scripts\activate
 
 #### macOS / Linux
-```
-
-bash source .venv/bin/activate``` 
+bash source .venv/bin/activate
 
 Install dependencies:
-```
-
-bash pip install -r requirements.txt``` 
+bash pip install -r requirements.txt
 
 Start the backend server:
-```
-
-bash uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000``` 
+bash uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 
 The backend will be available at:
 
@@ -72,13 +82,11 @@ The backend will be available at:
 - API docs: `http://localhost:8000/docs`
 
 ---
-
 ### 2) Start the frontend
 
 Open a second terminal in the `frontend` folder:
-```
 
-bash npm install npm run dev``` 
+bash npm install npm run dev
 
 The frontend will be available at:
 
@@ -93,9 +101,7 @@ This project includes Docker support for both the frontend and backend.
 ### 1) Start the app
 
 From the project root, run:
-```
-
-bash docker compose up --build``` 
+bash docker compose up --build
 
 This will:
 
@@ -118,9 +124,7 @@ After the containers are running:
 ### 3) Stop the app
 
 To stop the containers:
-```
-
-bash docker compose down``` 
+bash docker compose down
 
 This stops the app while keeping your database data safe.
 
@@ -143,19 +147,14 @@ That means your data survives:
 ## Useful Commands
 
 ### Backend
-```
 
-bash uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000``` 
+bash uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 
 ### Frontend
-```
-
-bash npm run dev``` 
+bash npm run dev
 
 ### Docker
-```
-
-bash docker compose up --build docker compose down docker compose logs -f``` 
+bash docker compose up --build docker compose down docker compose logs -f
 
 ---
 
@@ -180,10 +179,3 @@ Check that:
 If you change your SQLAlchemy models, the SQLite schema may need to be updated too. During development, you may need to recreate the database or add a migration step.
 
 ---
-
-## Project Structure
-```
-
-text TaskManagementApp/ ├── backend/ └── frontend/``` 
-
-```
