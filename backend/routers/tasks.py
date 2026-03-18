@@ -1,26 +1,26 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-
 from backend import models, schemas
 from backend.database import get_db
 
+# Create a router for task endpoints nested under a task list.
 router = APIRouter(prefix="/tasklists/{tasklist_id}/tasks", tags=["Tasks"])
 
-
+# Helper function to confirm a task list exists before working with its tasks.
 def get_tasklist_or_404(tasklist_id: int, db: Session):
     tasklist = db.query(models.TaskList).filter(models.TaskList.id == tasklist_id).first()
     if not tasklist:
         raise HTTPException(status_code=404, detail="Task list not found")
     return tasklist
 
-
+# Return all tasks for a specific task list.
 @router.get("", response_model=list[schemas.TaskResponse])
 def list_tasks(tasklist_id: int, db: Session = Depends(get_db)):
     get_tasklist_or_404(tasklist_id, db)
     tasks = db.query(models.Task).filter(models.Task.tasklist_id == tasklist_id).all()
     return tasks
 
-
+# Create a new task under a specific task list.
 @router.post("", response_model=schemas.TaskResponse, status_code=status.HTTP_201_CREATED)
 def create_task(tasklist_id: int, task: schemas.TaskCreate, db: Session = Depends(get_db)):
     get_tasklist_or_404(tasklist_id, db)
@@ -39,7 +39,7 @@ def create_task(tasklist_id: int, task: schemas.TaskCreate, db: Session = Depend
     db.refresh(new_task)
     return new_task
 
-
+# Return a single task belonging to a specific task list.
 @router.get("/{task_id}", response_model=schemas.TaskResponse)
 def get_task(tasklist_id: int, task_id: int, db: Session = Depends(get_db)):
     get_tasklist_or_404(tasklist_id, db)
@@ -53,7 +53,7 @@ def get_task(tasklist_id: int, task_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Task not found")
     return task
 
-
+# Update an existing task's fields.
 @router.put("/{task_id}", response_model=schemas.TaskResponse)
 def update_task(tasklist_id: int, task_id: int, updated_data: schemas.TaskUpdate, db: Session = Depends(get_db)):
     get_tasklist_or_404(tasklist_id, db)
@@ -76,7 +76,7 @@ def update_task(tasklist_id: int, task_id: int, updated_data: schemas.TaskUpdate
     db.refresh(task)
     return task
 
-
+# Delete a task from the database.
 @router.delete("/{task_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_task(tasklist_id: int, task_id: int, db: Session = Depends(get_db)):
     get_tasklist_or_404(tasklist_id, db)
