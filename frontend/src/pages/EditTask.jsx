@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getTask, updateTask } from "../api";
 import TaskForm from "../components/TaskForm";
 
+// Page used to edit an existing task.
 function EditTask() {
   const { id, taskId } = useParams();
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ function EditTask() {
   const [task, setTask] = useState(null);
   const [error, setError] = useState("");
 
+  // Load the task details so the form can be prefilled.
   useEffect(() => {
     async function loadTask() {
       try {
@@ -24,6 +26,7 @@ function EditTask() {
     loadTask();
   }, [id, taskId]);
 
+  // Save the updated task while preserving its completed state.
   async function handleUpdate(taskData) {
     await updateTask(id, taskId, {
       ...taskData,
@@ -32,6 +35,7 @@ function EditTask() {
     navigate(`/tasklists/${id}`);
   }
 
+  // Go back without saving changes.
   function handleCancel() {
     navigate(`/tasklists/${id}`);
   }

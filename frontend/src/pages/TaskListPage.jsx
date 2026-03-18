@@ -8,6 +8,7 @@ import {
 } from "../api";
 import TaskCard from "../components/TaskCard";
 
+// Page that shows one task list and its tasks.
 function TaskListPage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ function TaskListPage() {
   const [taskList, setTaskList] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Load the task list and its tasks from the backend.
   async function loadTaskList() {
     try {
       const data = await getTaskListById(id);
@@ -31,6 +33,7 @@ function TaskListPage() {
     loadTaskList();
   }, [id]);
 
+  // Delete the entire task list after user confirmation.
   async function handleDeleteTaskList() {
     const confirmed = window.confirm("Are you sure you want to delete this task list?");
     if (!confirmed) return;
@@ -43,6 +46,7 @@ function TaskListPage() {
     }
   }
 
+  // Delete a single task and then refresh the current task list view.
   async function handleDeleteTask(taskId) {
     const confirmed = window.confirm("Delete this task?");
     if (!confirmed) return;
@@ -55,6 +59,7 @@ function TaskListPage() {
     }
   }
 
+  // Toggle a task's completed state and refresh the task list.
   async function handleToggleCompleted(task) {
     try {
       await updateTask(id, task.id, {
@@ -70,6 +75,7 @@ function TaskListPage() {
     }
   }
 
+  // Navigate to the task edit page.
   function handleEditTask(taskId) {
     navigate(`/tasklists/${id}/tasks/${taskId}/edit`);
   }

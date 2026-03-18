@@ -7,6 +7,7 @@ import AddTask from "./pages/AddTask";
 import EditTask from "./pages/EditTask";
 import "./App.css";
 
+// Define the app's page routes and connect URLs to page components.
 function App() {
   return (
     <div className="app-container">

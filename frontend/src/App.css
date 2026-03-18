@@ -1,3 +1,4 @@
+/* Set the global page styling for the app. */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,22 +6,26 @@ body {
   color: #222;
 }
 
+/* Make the app occupy at least the full height of the viewport. */
 .app-container {
   min-height: 100vh;
 }
 
+/* Provide a centered content area for each page. */
 .page {
   max-width: 900px;
   margin: 0 auto;
   padding: 32px 20px;
 }
 
+/* Add consistent spacing below headings. */
 h1,
 h2,
 h3 {
   margin-bottom: 12px;
 }
 
+/* Shared card styling for forms and content blocks. */
 .form-card,
 .card {
   background: white;
@@ -29,6 +34,7 @@ h3 {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Layout for form cards. */
 .form-card {
   display: flex;
   flex-direction: column;
@@ -36,6 +42,7 @@ h3 {
   max-width: 600px;
 }
 
+/* Stack form labels vertically. */
 label {
   display: flex;
   flex-direction: column;
@@ -43,6 +50,7 @@ label {
   font-weight: 600;
 }
 
+/* Style form controls for consistency. */
 input,
 textarea,
 select {
@@ -52,6 +60,7 @@ select {
   border-radius: 8px;
 }
 
+/* Arrange action buttons with spacing and wrapping. */
 .actions {
   display: flex;
   gap: 12px;
@@ -59,6 +68,7 @@ select {
   margin: 16px 0;
 }
 
+/* Base button/link styling. */
 .btn {
   border: none;
   border-radius: 8px;
@@ -69,41 +79,49 @@ select {
   display: inline-block;
 }
 
+/* Primary action button. */
 .primary-btn {
   background: #2563eb;
   color: white;
 }
 
+/* Secondary action button. */
 .secondary-btn {
   background: #6b7280;
   color: white;
 }
 
+/* Destructive action button. */
 .danger-btn {
   background: #dc2626;
   color: white;
 }
 
+/* Positive action button. */
 .success-btn {
   background: #16a34a;
   color: white;
 }
 
+/* Grid layout for lists of cards. */
 .list-grid {
   display: grid;
   gap: 16px;
 }
 
+/* Make linked cards look like regular cards. */
 .link-card {
   color: inherit;
   text-decoration: none;
 }
 
+/* Highlight completed tasks visually. */
 .task-card.completed {
   border-left: 6px solid #16a34a;
   opacity: 0.92;
 }
 
+/* Display validation and error messages clearly. */
 .error-text {
   color: #dc2626;
   font-weight: 600;

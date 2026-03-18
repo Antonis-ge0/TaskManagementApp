@@ -1,3 +1,4 @@
+// Display the details of a single task and expose task actions.
 function TaskCard({ task, onEdit, onDelete, onToggleComplete }) {
   return (
     <div className={`card task-card ${task.completed ? "completed" : ""}`}>

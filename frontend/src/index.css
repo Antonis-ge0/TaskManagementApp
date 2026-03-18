@@ -1,7 +1,9 @@
+/* Apply consistent box sizing across the app. */
 * {
   box-sizing: border-box;
 }
 
+/* Ensure the app fills the viewport without default spacing. */
 html,
 body,
 #root {

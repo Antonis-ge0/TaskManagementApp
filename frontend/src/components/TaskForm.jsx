@@ -11,21 +11,25 @@ function TaskForm({
   },
   submitLabel = "Create Task",
 }) {
+  //Storing the current values of each form field in local component state.
   const [title, setTitle] = useState(initialData.title || "");
   const [description, setDescription] = useState(initialData.description || "");
   const [dueDate, setDueDate] = useState(initialData.due_date || "");
   const [priority, setPriority] = useState(initialData.priority || "Medium");
   const [error, setError] = useState("");
 
+  // Handle form submission, validate required input, and pass data to the parent.
   async function handleSubmit(event) {
     event.preventDefault();
 
+    // Prevent submitting an empty task title.
     if (!title.trim()) {
       setError("Task title is required.");
       return;
     }
 
     try {
+      // Send the cleaned form data back to the parent component.
       await onSubmit({
         title: title.trim(),
         description: description.trim(),
@@ -33,6 +37,7 @@ function TaskForm({
         priority,
       });
     } catch (err) {
+      // Show a user-friendly error if submission fails.
       console.error(err);
       setError("Could not save task.");
     }

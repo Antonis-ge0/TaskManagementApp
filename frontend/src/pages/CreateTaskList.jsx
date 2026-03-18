@@ -2,12 +2,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createTaskList } from "../api";
 
+// Page used to create a new task list.
 function CreateTaskList() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // Submit a new task list to the backend after validating required fields.
   async function handleSubmit(event) {
     event.preventDefault();
 

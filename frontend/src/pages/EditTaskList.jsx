@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getTaskListById, updateTaskList } from "../api";
 
+// Page used to edit an existing task list.
 function EditTaskList() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ function EditTaskList() {
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
 
+  // Load the selected task list so the form can be prefilled.
   useEffect(() => {
     async function loadTaskList() {
       try {

@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { getTaskLists } from "../api";
 import TaskListCard from "../components/TaskListCard";
 
+// Home page that loads and displays all task lists.
 function Home() {
   const [taskLists, setTaskLists] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Load task lists from the backend when the page first renders.
   async function loadTaskLists() {
     try {
       const data = await getTaskLists();

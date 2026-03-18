@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// Display a task list summary and link to its detail page.
 function TaskListCard({ taskList }) {
   return (
     <Link to={`/tasklists/${taskList.id}`} className="card link-card">
