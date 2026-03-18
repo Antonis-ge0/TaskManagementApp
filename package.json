@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "fastapi": "^0.0.8",
+    "pydantic": "^0.0.1-security",
+    "r": "^0.0.5",
+    "react-router-dom": "^7.13.1",
+    "sqlalchemy": "^10.1.1",
+    "uvicorn": "^0.0.1-security"
+  }
+}
