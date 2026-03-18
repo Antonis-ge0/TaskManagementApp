@@ -24,16 +24,16 @@ Task Management App is a simple full-stack productivity tool designed to help us
 
 ## Screenshots
 
-### Home Page
+## Home Page
 ![Home Page](./screenshots/Home.png)
 
-### Task List Page
+## Task List Page
 ![Task List Page](./screenshots/TaskListPage.png)
 
-### Create / Edit Task
+## Create / Edit Task
 ![Task Form](./screenshots/TaskForm.png)
 
-### Task List
+## Task List
 ![Task List](./screenshots/TaskList.png)
 
 ## Getting Started
@@ -45,9 +45,9 @@ You can run this project in one of two ways:
 
 ---
 
-## Run Locally
+# Run Locally
 
-### Prerequisites
+## Prerequisites
 
 Make sure you have the following installed:
 
@@ -55,9 +55,10 @@ Make sure you have the following installed:
 - Node.js 20+
 - npm
 
-### 1) Start the backend
+## 1) Start the backend
 
-# Open a terminal in the `backend` folder:
+Open a terminal in the `backend` folder:
+ 
 ```bash python -m venv .venv``` 
 
 Activate the virtual environment:
@@ -68,10 +69,12 @@ Activate the virtual environment:
 #### macOS / Linux
 ```bash source .venv/bin/activate``` 
 
-# Install dependencies
+Install dependencies
+
 ```bash pip install -r requirements.txt``` 
 
-# Start the backend server
+Start the backend server
+
 ```bash uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000``` 
 
 The backend will be available at:
@@ -81,9 +84,10 @@ The backend will be available at:
 
 ---
 
-### 2) Start the frontend
+## 2) Start the frontend
 
-# Open a second terminal in the `frontend` folder:
+Open a second terminal in the `frontend` folder:
+
 ```bash npm install npm run dev``` 
 
 The frontend will be available at:
@@ -118,9 +122,10 @@ The frontend will be available at:
 
 This project includes Docker support for both the frontend and backend.
 
-### 1) Start the app
+## 1) Start the app
 
-# From the project root, run:
+From the project root, run:
+
 ```bash docker compose up --build``` 
 
 This will:
@@ -132,7 +137,7 @@ This will:
 
 ---
 
-### 2) Open the app
+## 2) Open the app
 
 After the containers are running:
 
@@ -141,7 +146,7 @@ After the containers are running:
 
 ---
 
-### 3) Stop the app
+## 3) Stop the app
 
 To stop the containers:
 ```bash docker compose down``` 
