@@ -97,6 +97,8 @@ The frontend will be available at:
 ---
 
 ## Run with Docker
+This project includes Docker support for both the frontend and backend.
+
 > [!NOTE]  
 > Before you proceed in any of the following actions make sure to make a .dockerignore file in the app repository
 > with the following: <pre>
@@ -119,8 +121,6 @@ The frontend will be available at:
 > frontend/dist 
 > frontend/.env 
 > backend/.env </pre>
-
-This project includes Docker support for both the frontend and backend.
 
 ## 1) Start the app
 
