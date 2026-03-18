@@ -93,6 +93,28 @@ The frontend will be available at:
 ---
 
 ## Run with Docker
+> [!NOTE]  
+> Before you procceed in any of the following actions make sure to make an .dockerignore file in the app repository
+> with the following:
+> **/.venv
+> **/node_modules
+> **/__pycache__
+> **/*.pyc
+> **/*.pyo
+> **/*.pyd
+> **/.pytest_cache
+> **/.mypy_cache
+> **/.ruff_cache
+> **/.idea
+> **/.vscode
+> **/.git
+> **/.gitignore
+> **/*.db
+> **/*.sqlite
+> **/*.sqlite3
+> frontend/dist
+> frontend/.env
+> backend/.env
 
 This project includes Docker support for both the frontend and backend.
 
