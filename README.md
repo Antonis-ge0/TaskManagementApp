@@ -57,7 +57,7 @@ Make sure you have the following installed:
 
 ### 1) Start the backend
 
-Open a terminal in the `backend` folder:
+Open a terminal in the `backend` folder
 ```bash python -m venv .venv``` 
 
 Activate the virtual environment:
@@ -68,10 +68,10 @@ Activate the virtual environment:
 #### macOS / Linux
 ```bash source .venv/bin/activate``` 
 
-Install dependencies:
+Install dependencies
 ```bash pip install -r requirements.txt``` 
 
-Start the backend server:
+Start the backend server
 ```bash uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000``` 
 
 The backend will be available at:
