@@ -94,8 +94,8 @@ The frontend will be available at:
 
 ## Run with Docker
 > [!NOTE]  
-> Before you procceed in any of the following actions make sure to make an .dockerignore file in the app repository
-> with the following:
+> Before you proceed in any of the following actions make sure to make a .dockerignore file in the app repository
+> with the following, the one under the other:
 > **/.venv
 > **/node_modules
 > **/__pycache__
